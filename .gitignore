@@ -1,0 +1,11 @@
+# Visual Studio & VSCode
+.vs/
+.vscode/
+*.rc
+
+# QtCreator
+CMakeLists.txt.user
+
+# Build files for VS and VS Code.
+build/
+out/

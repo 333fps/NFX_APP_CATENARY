@@ -1,0 +1,20 @@
+root = true
+
+# C/C++
+[*.{c,cc,h,hh,inl,glsl}]
+charset = utf-8
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = tab
+indent_size = 4
+
+# CMake & Text
+[*.{cmake,txt}]
+charset = utf-8
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = tab
+indent_size = 4
+max_line_length = 99
