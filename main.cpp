@@ -8,12 +8,16 @@ int main(int argc, char* argv[])
 {
 	(void)argc;
 	(void)argv;
-
-	Catenary::Height h{ 1500. };
+	Catenary::AlphaAngle aa{ 60. };
+	Catenary::Height h{ 150. };
 	Catenary::Laydown ld{ 500. };
-	Catenary::LinearDensity l{ 2.0 };
+	Catenary::LinearDensity l{ 1.0 };
+	Catenary::Layback lb{ 150. };
+	Catenary::HorizontalTension ht{ 25. };
 
-	Catenary c{ h, ld, l };
+	Catenary c{ ht, lb, l };
+
+	std::cout << std::setprecision(12) << std::endl;
 
 	std::cout << " Linear density....: " << c.linearDensity() << std::endl;
 	std::cout << " Top tension.......: " << c.topTension() << std::endl;
