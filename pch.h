@@ -6,6 +6,4 @@
 #endif
 
 /* c++ STL */
-#include <functional>
 #include <iostream>
-#include <string>
