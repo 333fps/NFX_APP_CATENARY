@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
 
 	c.update(h, ld, l);
 
-	auto copy = Catenary{ c };
+	Catenary copy = Catenary{ c };
 
 	c.reset();
 
