@@ -8,18 +8,14 @@ int main(int argc, char* argv[])
 {
 	(void)argc;
 	(void)argv;
-	Catenary::AlphaAngle aa{ 60. };
-	Catenary::Height h{ 150. };
-	Catenary::Laydown ld{ 500. };
-	Catenary::LinearDensity l{ 1.0 };
-	Catenary::Layback lb{ 150. };
-	Catenary::HorizontalTension ht{ 25. };
+
+	Catenary c;
 
 	Catenary::Height h{ 1500. };
 	Catenary::Laydown ld{ 500. };
 	Catenary::LinearDensity l{ 2.0 };
 
-	Catenary c{ h, ld, l };
+	c.update(h, ld, l);
 
 	auto copy = Catenary{ c };
 
