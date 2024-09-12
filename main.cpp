@@ -15,12 +15,9 @@ int main(int argc, char* argv[])
 	Catenary::Laydown ld{ 500. };
 	Catenary::LinearDensity l{ 2.0 };
 
-	c.update(h, ld, l);
+	c.solve(h, ld, l);
 
-	Catenary copy = Catenary{ c };
-
-	c.reset();
-
+	std::cout << std::setprecision(15) << std::endl;
 	std::cout << " Linear density....: " << c.linearDensity() << std::endl;
 	std::cout << " Top tension.......: " << c.topTension() << std::endl;
 	std::cout << " Alpha angle.......: " << c.alphaAngle() << std::endl;
@@ -31,14 +28,15 @@ int main(int argc, char* argv[])
 	std::cout << " Laydown...........: " << c.laydown() << std::endl;
 	std::cout << " Sag parameter.....: " << c.sagParameter() << std::endl;
 
-	std::cout << "\nCopy" << std::endl;
-	std::cout << " Linear density....: " << copy.linearDensity() << std::endl;
-	std::cout << " Top tension.......: " << copy.topTension() << std::endl;
-	std::cout << " Alpha angle.......: " << copy.alphaAngle() << std::endl;
-	std::cout << " Height............: " << copy.height() << std::endl;
-	std::cout << " Layback...........: " << copy.layback() << std::endl;
-	std::cout << " Horizontal tension: " << copy.horizontalTension() << std::endl;
-	std::cout << " Suspended length..: " << copy.suspendedLength() << std::endl;
-	std::cout << " Laydown...........: " << copy.laydown() << std::endl;
-	std::cout << " Sag parameter.....: " << copy.sagParameter() << std::endl;
+	/*
+		 Linear density....: 2
+		 Top tension.......: 8119.62171928695
+		 Alpha angle.......: 50.9111236653963
+		 Height............: 1500
+		 Layback...........: 2651.09866416962
+		 Horizontal tension: 5119.62171928695
+		 Suspended length..: 3151.09866416962
+		 Laydown...........: 500
+		 Sag parameter.....: 2559.81085964347
+	*/
 }
