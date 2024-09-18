@@ -11,11 +11,11 @@ int main(int argc, char* argv[])
 
 	Catenary c;
 
-	Catenary::Height h{ 1500. };
-	Catenary::Laydown ld{ 500. };
-	Catenary::LinearDensity l{ 2.0 };
+	Catenary::Height h{ 80. };
+	Catenary::TopTension tt{ 155 };
+	Catenary::LinearDensity l{ .5 };
 
-	c.solve(h, ld, l);
+	c.solve(h, tt, l);
 
 	std::cout << std::setprecision(15) << std::endl;
 	std::cout << " Linear density....: " << c.linearDensity() << std::endl;
