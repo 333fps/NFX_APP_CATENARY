@@ -15,8 +15,8 @@ set( NFX_BUILD_DOCUMENTATION		OFF		)
 set( NFX_BUILD_APPLICATION			OFF		)
 set( NFX_BUILD_UTILS				OFF		)
 set( NFX_BUILD_WINDOW				OFF		)
-set( NFX_BUILD_GUI					OFF		)
 set( NFX_BUILD_GRAPHICS				OFF		)
+set( NFX_BUILD_GUI					OFF		)
 set( NFX_BUILD_ECS					OFF		)
 set( NFX_BUILD_GIS					OFF		)
 set( NFX_BUILD_RESOURCE_MANAGER		OFF		)
@@ -33,6 +33,5 @@ set( NFX_WITH_IMGUI_IMGUIZMO		OFF		)
 set( NFX_WITH_IMGUI_DOCKING			OFF		)
 
 add_subdirectory( $ENV{nfx_DIR} "nfxLibs" )
-
 
 

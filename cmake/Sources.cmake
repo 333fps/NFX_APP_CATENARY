@@ -7,10 +7,7 @@
 #
 
 set( sources_files
-					"pch.cpp"
-
 					"main.cpp"
-
 )
 
 add_executable( ${PROJECT_NAME}
@@ -18,12 +15,14 @@ add_executable( ${PROJECT_NAME}
 							${sources_files}
 )
 
-target_precompile_headers( ${PROJECT_NAME} PUBLIC "pch.h" )
-
 target_compile_options( ${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:${CXX_COMPILE_FLAGS}> )
 
 target_include_directories( ${PROJECT_NAME} PRIVATE "." )
-target_link_directories( ${PROJECT_NAME} PUBLIC ${nfx_LIB_DIR} )
+
+#target_link_directories( ${PROJECT_NAME} PUBLIC ${nfx_LIB_DIR} )
+
+target_precompile_headers( ${PROJECT_NAME} REUSE_FROM nfxCore )
+
 
 if( UNIX )
 	set_target_properties( ${PROJECT_NAME} PROPERTIES

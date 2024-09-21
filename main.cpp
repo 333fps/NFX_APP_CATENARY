@@ -1,5 +1,3 @@
-#include "pch.h"
-
 #include <nfx/Catenary/Catenary.h>
 
 using namespace nfx;
