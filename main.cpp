@@ -9,11 +9,17 @@ int main(int argc, char* argv[])
 
 	Catenary c;
 
-	Catenary::Height h{ 80. };
-	Catenary::Layback tt{ 186.667719164158 };
-	Catenary::LinearDensity l{ .5 };
+	Catenary::LinearDensity l{ 0.5 };
+	Catenary::TopTension tt{ 154.747763904733 };
+	Catenary::AlphaAngle aa{ 42. };
+	Catenary::Height h{ 79.4955278094665 };
+	Catenary::Layback lb{ 186.108462726882 };
+	Catenary::HorizontalTension ht{ 115. };
+	Catenary::SuspendedLength sl{ 207.092930188503 };
+	Catenary::Laydown ld{ 20.9844674616207 };
+	Catenary::SagParameter sag{ 230. };
 
-	c.solve(h, tt, l);
+	c.solve(h, lb, l);
 
 	std::cout << std::setprecision(15) << std::endl;
 	std::cout << "Linear density....: " << c.linearDensity() << std::endl;
@@ -25,17 +31,4 @@ int main(int argc, char* argv[])
 	std::cout << "Suspended length..: " << c.suspendedLength() << std::endl;
 	std::cout << "Laydown...........: " << c.laydown() << std::endl;
 	std::cout << "Sag parameter.....: " << c.sagParameter() << std::endl;
-
-	Catenary c2{ Catenary::SuspendedLength{ 207.845967965072 }, Catenary::Laydown{ 21.1782488009143 }, Catenary::LinearDensity{ 0.5 } };
-
-	(void)c2;
-	std::cout << "\nLinear density....: " << c2.linearDensity() << std::endl;
-	std::cout << "Top tension.......: " << c2.topTension() << std::endl;
-	std::cout << "Alpha angle.......: " << c2.alphaAngle() << std::endl;
-	std::cout << "Height............: " << c2.height() << std::endl;
-	std::cout << "Layback...........: " << c2.layback() << std::endl;
-	std::cout << "Horizontal tension: " << c2.horizontalTension() << std::endl;
-	std::cout << "Suspended length..: " << c2.suspendedLength() << std::endl;
-	std::cout << "Laydown...........: " << c2.laydown() << std::endl;
-	std::cout << "Sag parameter.....: " << c2.sagParameter() << std::endl;
 }
