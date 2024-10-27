@@ -19,10 +19,7 @@ target_compile_options( ${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:${CXX_
 
 target_include_directories( ${PROJECT_NAME} PRIVATE "." )
 
-#target_link_directories( ${PROJECT_NAME} PUBLIC ${nfx_LIB_DIR} )
-
 target_precompile_headers( ${PROJECT_NAME} REUSE_FROM nfxCore )
-
 
 if( UNIX )
 	set_target_properties( ${PROJECT_NAME} PROPERTIES

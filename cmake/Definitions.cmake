@@ -77,42 +77,73 @@ if( UNIX AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU" )
 						-std=c++20
 						-no-pie
 						-fno-pie
-						-ffunction-sections
-						-fdata-sections
-						-msse4.1
 						-fPIC
+						-fdata-sections
+						-g1
+						-msse
+						-msse2
+						-msse3
+						-msse4.1
 						-pthread
+						-DNDEBUG
+						-O3
+						-fdiagnostics-color=always
+						-fdiagnostics-show-option
+						-ffunction-sections
+						-fomit-frame-pointer
+						-fsigned-char
 						-W
+						-Waddress
 						-Wall
-						-Wextra
-						-Werror
-						-Wunused
-						-Wpedantic
-						-Wundef
-						-Wshadow
-						-Wswitch-default
-						-Wswitch-enum
-						-Wconversion
-						-Wunreachable-code
-						-Wdouble-promotion
-						-Wtautological-compare
-						-Wshadow
-						-Wswitch-default
-						-Wswitch-enum
-						-Wunreachable-code
-						-Wdouble-promotion
 						-Walloca
+						-Wcast-align
+						-Wcast-qual
+						-Wconversion
+#						-Wctor-dtor-privacy
+						-Wdisabled-optimization
+						-Wdouble-promotion
+						-Werror
+						-Wextra
+						-Wformat
+						-Wformat-security
+						-Wformat=2
+						-Wimplicit-fallthrough=3
+						-Winit-self
+						-Wmissing-declarations
+						-Wmissing-field-initializers
+#						-Wno-comment
+#						-Wno-delete-non-virtual-dtor
+#						-Wno-deprecated-copy
+#						-Wno-dev
+#						-Wno-long-long
+#						-Wno-strict-overflow
+#						-Wno-unused
+#						-Wno-unused-parameter
+#						-Wnon-virtual-dtor
+#						-Wold-style-cast
+						-Woverloaded-virtual
+						-Wpedantic
+						-Wpointer-arith
+						-Wredundant-decls
+						-Wreorder
+						-Wreturn-type
+						-Wsequence-point
+						-Wshadow
+						-Wsign-conversion
+						-Wsuggest-override
+						-Wswitch-default
+						-Wswitch-enum
+						-Wtautological-compare
+						-Wtype-limits
+						-Wundef
+						-Wuninitialized
+						-Wunknown-pragmas
+						-Wunreachable-code
+						-Wunused
 						-Wunused-but-set-variable
-						-Wno-deprecated-copy
-						-Wunused-variable
 						-Wunused-parameter
 						-Wunused-result
-						-Wtype-limits
-						-Wmissing-field-initializers
-						-Wunknown-pragmas
-						-Wreorder
-						-fdiagnostics-color=always
-						-Wno-dev
+						-Wunused-variable
 	)
 endif()
 
@@ -120,41 +151,72 @@ if( UNIX AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang" )
 	set( CXX_COMPILE_FLAGS
 						-std=c++20
 						-fno-pie
-						-ffunction-sections
-						-fdata-sections
-						-msse4.1
 						-fPIC
+						-fdata-sections
+						-g1
+						-msse
+						-msse2
+						-msse3
+						-msse4.1
 						-pthread
+						-DNDEBUG
+						-O3
+						-fdiagnostics-color=always
+						-fdiagnostics-show-option
+						-ffunction-sections
+						-fomit-frame-pointer
+						-fsigned-char
 						-W
+						-Waddress
 						-Wall
-						-Wextra
+						-Walloca
+						-Wcast-align
+						-Wcast-qual
+						-Wconversion
+#						-Wctor-dtor-privacy
+						-Wdisabled-optimization
+						-Wdouble-promotion
 						-Werror
-						-Wunused
+						-Wextra
+						-Wformat
+						-Wformat-security
+						-Wformat=2
+#						-Wimplicit-fallthrough
+						-Winit-self
+						-Wmissing-declarations
+						-Wmissing-field-initializers
+#						-Wno-comment
+#						-Wno-delete-non-virtual-dtor
+#						-Wno-deprecated-copy
+#						-Wno-dev
+#						-Wno-long-long
+#						-Wno-strict-overflow
+						-Wno-unused
+						-Wno-unused-parameter
+#						-Wnon-virtual-dtor
+#						-Wold-style-cast
+						-Woverloaded-virtual
 						-Wpedantic
-						-Wundef
+						-Wpointer-arith
+						-Wredundant-decls
+						-Wreorder
+						-Wreturn-type
+						-Wsequence-point
 						-Wshadow
+						-Wsign-conversion
+						-Wsuggest-override
 						-Wswitch-default
 						-Wswitch-enum
-						-Wconversion
-						-Wunreachable-code
-						-Wdouble-promotion
-						-Wnewline-eof
-						-Wunreachable-code-break
-						-Wclass-varargs
-						-Wstring-conversion
-						-Walloca
-						-Wcomma
-						-Wshorten-64-to-32
-						-Wunused-lambda-capture
-						-Wunused-but-set-variable
-						-Wdeprecated-copy
-						-Wunused-variable
-						-Wunused-parameter
-						-Wunused-result
+						-Wtautological-compare
 						-Wtype-limits
-						-Wmissing-field-initializers
+						-Wundef
+						-Wuninitialized
 						-Wunknown-pragmas
-						-Wreorder
-						-fdiagnostics-color=always
-	)
+						-Wunreachable-code
+#						-Wunused
+#						-Wunused-but-set-variable
+#						-Wunused-parameter
+#						-Wunused-result
+#						-Wunused-variable
+)
 endif()
